@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Food Delivery Application</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Food Delivery Application</h1>
+        <p>Order your favourite food online</p>
+    </header>
+
+    <div class="container">
+
+        <h2>Food Menu</h2>
+
+        <div class="food">
+            <h3>Pizza</h3>
+            <p>Price: ₹250</p>
+            <button onclick="addToCart('Pizza', 250)">
+                Add to Cart
+            </button>
+        </div>
+
+        <div class="food">
+            <h3>Burger</h3>
+            <p>Price: ₹150</p>
+            <button onclick="addToCart('Burger', 150)">
+                Add to Cart
+            </button>
+        </div>
+
+        <div class="food">
+            <h3>Biryani</h3>
+            <p>Price: ₹200</p>
+            <button onclick="addToCart('Biryani', 200)">
+                Add to Cart
+            </button>
+        </div>
+
+        <h2>Cart</h2>
+
+        <p id="cart">Cart is empty</p>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
