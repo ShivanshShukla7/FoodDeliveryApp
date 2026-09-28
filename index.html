@@ -7,46 +7,106 @@
 
 <body>
 
-    <header>
-        <h1>Food Delivery Application</h1>
-        <p>Order your favourite food online</p>
-    </header>
+<header>
+    <h1>Food Delivery Application</h1>
+    <p>Order your favourite food online</p>
+</header>
 
-    <div class="container">
+<!-- Login Section -->
+<section class="login">
+    <h2>User Login</h2>
 
-        <h2>Food Menu</h2>
+    <form onsubmit="login(event)">
+        <input type="email" id="email"
+               placeholder="Enter Email" required>
 
-        <div class="food">
-            <h3>Pizza</h3>
-            <p>Price: ₹250</p>
-            <button onclick="addToCart('Pizza', 250)">
-                Add to Cart
-            </button>
+        <input type="password" id="password"
+               placeholder="Enter Password" required>
+
+        <button type="submit">Login</button>
+    </form>
+
+    <p id="loginMessage"></p>
+</section>
+
+
+<div class="container">
+
+    <!-- Food Menu -->
+    <h2>Food Menu</h2>
+
+    <div class="food">
+        <h3>Pizza</h3>
+        <p>Price: ₹250</p>
+        <button onclick="addToCart('Pizza', 250)">
+            Add to Cart
+        </button>
+    </div>
+
+    <div class="food">
+        <h3>Burger</h3>
+        <p>Price: ₹150</p>
+        <button onclick="addToCart('Burger', 150)">
+            Add to Cart
+        </button>
+    </div>
+
+    <div class="food">
+        <h3>Biryani</h3>
+        <p>Price: ₹200</p>
+        <button onclick="addToCart('Biryani', 200)">
+            Add to Cart
+        </button>
+    </div>
+
+    <div class="food">
+        <h3>Paneer Roll</h3>
+        <p>Price: ₹120</p>
+        <button onclick="addToCart('Paneer Roll', 120)">
+            Add to Cart
+        </button>
+    </div>
+
+
+    <!-- Cart -->
+    <div class="cart-section">
+
+        <h2>Shopping Cart</h2>
+
+        <div id="cart">
+            Cart is empty
         </div>
 
-        <div class="food">
-            <h3>Burger</h3>
-            <p>Price: ₹150</p>
-            <button onclick="addToCart('Burger', 150)">
-                Add to Cart
-            </button>
-        </div>
-
-        <div class="food">
-            <h3>Biryani</h3>
-            <p>Price: ₹200</p>
-            <button onclick="addToCart('Biryani', 200)">
-                Add to Cart
-            </button>
-        </div>
-
-        <h2>Cart</h2>
-
-        <p id="cart">Cart is empty</p>
+        <h3 id="total">Total: ₹0</h3>
 
     </div>
 
-    <script src="script.js"></script>
+
+    <!-- Payment -->
+    <div class="payment">
+
+        <h2>Payment</h2>
+
+        <select id="paymentMethod">
+            <option value="">Select Payment Method</option>
+            <option value="UPI">UPI</option>
+            <option value="Card">Credit/Debit Card</option>
+            <option value="COD">Cash on Delivery</option>
+        </select>
+
+        <br><br>
+
+        <button onclick="makePayment()">
+            Pay Now
+        </button>
+
+        <p id="paymentMessage"></p>
+
+    </div>
+
+</div>
+
+<script src="script.js"></script>
 
 </body>
 </html>
